@@ -6,8 +6,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
-  /* background-color: grey; */
+  background: #F9F9F9;
 }
 .container-for-imgs {
   display: flex;
@@ -40,11 +39,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0px 0px 40px 0px;
 
 }
 
 .logout-container{
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 

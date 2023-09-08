@@ -4,7 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div style={{backgroundColor:'wheat'}} className="App">
+    
+    <div className="App">
+      
       <Sidebar />
       <Navbar/>
     </div>
