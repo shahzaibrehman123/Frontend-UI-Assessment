@@ -1,0 +1,78 @@
+
+.img-name-container {
+  margin: 10px 0px 0px 10px;
+  display: flex;
+  height: 36px;
+}
+
+.text-container {
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.hi-container {
+  color: #222;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.name-container {
+  color: #7b7b7b;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.assist-container {
+  margin-left: 25px;
+  text-align: center; /* Center the input field and icon horizontally */
+  margin-top: 10px;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.input-field {
+  border-radius: 36px;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  padding: 10px;
+  padding-right: 30px; /* Add right padding for the icon */
+  width: 100%;
+}
+.input-field:focus {
+  border: none;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: -30px; /* Adjust the right position of the icon */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+.outer-container{
+  
+  display: flex;
+  height: auto;
+}
+
+.parent-div{
+  display: flex;
+  
+}
+
+.collaborators{
+  margin: 10px 0px 0px 10px;
+  display: flex;
+}
