@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import CollaboratorModal from "./CollaboratorModal/CollaboratorModal";
 import "./VideoSection.css";
 import Search from "./Search";
 import u1 from "../../Assets/NavbarAssets/users/u1.svg";
@@ -19,7 +20,35 @@ import CurrentDate from "../../Utils/CurrentDate";
 
 function VideoSection() {
   const [selectedButton, setSelectedButton] = useState("All");
-  const [latestDate, setLatestDate] = useState('4 Sep, 2023');
+  // eslint-disable-next-line
+  const [latestDate, setLatestDate] = useState("4 Sep, 2023");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [collaborators, setCollaborators] = useState([
+    { id: 1, image: u1 },
+    { id: 2, image: u2 },
+  ]);
+  const addCollaborator = (newCollaboratorImage) => {
+    // Use a default image (u2) if newCollaboratorImage is empty or falsy
+    const imageToUse = newCollaboratorImage || u2;
+
+    // Create a new collaborator object with a unique ID
+    const newCollaboratorId = collaborators.length + 1;
+    const newCollaborator = {
+      id: newCollaboratorId,
+      image: imageToUse,
+    };
+
+    // Update the state to include the new collaborator
+    setCollaborators([...collaborators, newCollaborator]);
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
@@ -51,12 +80,15 @@ function VideoSection() {
 
           <div className="re-gre-cont">
             <span id="subheading">Recently created videos</span>
-            <div style={{marginTop:"5px"}}>
-      <div id="green-box">
-        <div id="date-text"><CurrentDate onUpdateDate={(newDate) => setLatestDate(newDate)} /></div>
-      </div>
-      
-    </div>
+            <div style={{ marginTop: "5px" }}>
+              <div id="green-box">
+                <div id="date-text">
+                  <CurrentDate
+                    onUpdateDate={(newDate) => setLatestDate(newDate)}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div>
@@ -69,25 +101,33 @@ function VideoSection() {
         <div className="parent-btn-container">
           <div className="btn-container">
             <div
-              className={`outer-layer ${selectedButton === "All" ? "selected" : ""}`}
+              className={`outer-layer ${
+                selectedButton === "All" ? "selected" : ""
+              }`}
               onClick={() => handleButtonClick("All")}
             >
               All
             </div>
             <div
-              className={`outer-layer ${selectedButton === "Ads video" ? "selected" : ""}`}
+              className={`outer-layer ${
+                selectedButton === "Ads video" ? "selected" : ""
+              }`}
               onClick={() => handleButtonClick("Ads video")}
             >
               Ads video
             </div>
             <div
-              className={`outer-layer ${selectedButton === "Ai generated video" ? "selected" : ""}`}
+              className={`outer-layer ${
+                selectedButton === "Ai generated video" ? "selected" : ""
+              }`}
               onClick={() => handleButtonClick("Ai generated video")}
             >
               Ai generated video
             </div>
             <div
-              className={`outer-layer ${selectedButton === "Marketing video" ? "selected" : ""}`}
+              className={`outer-layer ${
+                selectedButton === "Marketing video" ? "selected" : ""
+              }`}
               onClick={() => handleButtonClick("Marketing video")}
             >
               Marketing video
@@ -96,13 +136,28 @@ function VideoSection() {
         </div>
         <div className="collaborator-container">
           <div className="collaborators">
-            <div className="colab-head">Collaborators(2):</div>
+            <div className="colab-head">
+              Collaborators({collaborators.length}):
+            </div>
             <div className="img-area">
-              <img src={u1} alt="Avatar" className="avatar" />
-              <img src={u2} alt="Avatar" className="avatar" />
+              {collaborators.map((collaborator) => (
+                <img
+                  key={collaborator.id}
+                  src={collaborator.image}
+                  alt="Avatar"
+                  className="avatar"
+                />
+              ))}
             </div>
             <div>
-              <div id="add-new-container">+ add new</div>
+              <div id="add-new-container" onClick={handleOpenModal}>
+                + add new
+              </div>
+              <CollaboratorModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+                addCollaborator={addCollaborator}
+              />
             </div>
           </div>
         </div>
@@ -110,7 +165,12 @@ function VideoSection() {
       <div className="lower-section">
         <div className="card-container">
           {cardData.map((card, index) => (
-            <Card key={index} title={card.title} description={card.description} img={card.img} />
+            <Card
+              key={index}
+              title={card.title}
+              description={card.description}
+              img={card.img}
+            />
           ))}
         </div>
       </div>

@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Briefly introduce your project and its purpose. Explain what problem it aims to solve or what functionality it provides.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Vercel Live](#vercel-Live)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+1. **Sidebar Navigation:**
+   - Toggle sidebar open/close.
+   - Display user avatar and navigation icons.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Right Slider:**
+   - Display content in a right sidebar when the sidebar is open.
 
-### `npm run build`
+3. **VideoSection:**
+   - Display a list of recent videos.
+   - Filter videos by category (All, Ads video, Ai generated video, Marketing video).
+   - Display video thumbnails, titles, and creation dates.
+   - Collaborators feature:
+     - Display a list of collaborators with avatar images.
+     - Ability to add new collaborators through a modal.
+   - Search functionality to search for videos.
+   - Responsive design for various screen sizes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **CollaboratorModal:**
+   - Display a modal for adding new collaborators.
+   - Search for collaborators by name or email.
+   - Add collaborators to the list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Navbar:**
+   - Display user avatar and information.
+   - Display a list of collaborators with avatar images.
+   - Responsive design for various screen sizes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+``` your-project/
+|-- src/
+|   |-- components/
+|   |   |-- Drawer
+|   |   |-- Navbar
+        |-- Sidebar
+        |-- VideoSection
+|   |-- Assets/
+|   |   |-- CardAssets
+        |-- NavbarAssets
+        |-- SidebarAssets
+        |-- VideoSection
+|   |-- Utils/
+|   |   |-- CurrentDate.js
+|-- public/
+|   |-- index.html
+|-- package.json
+|-- README.md
+|-- ...
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Prerequisites
 
-## Learn More
+Specify any prerequisites that users or developers need before they can use or contribute to your project. This could include software, hardware, or accounts. Include links or installation instructions where necessary.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Example:
+- Node.js (v14.0 or higher): [Download and Install Node.js](https://nodejs.org/)
+- Git: [Download and Install Git](https://git-scm.com/downloads)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Getting Started
 
-### Code Splitting
+Provide step-by-step instructions on how to set up the project locally. Include code snippets, commands, or configuration files that need to be modified.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Example:
 
-### Analyzing the Bundle Size
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   git clone https://github.com/shahzaibrehman123/Frontend-UI-Assessment.git
 
-### Making a Progressive Web App
+2. Navigate to the directory where you want to create your React project. You can use the cd command to change directories:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   cd path/to/your/project/directory
 
-### Advanced Configuration
+3. Installation for the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   npm install
 
-### Deployment
+4. run the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```bash
+   npm run start
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Vercel Live
+ Website
+```bash
+   git clone https://github.com/shahzaibrehman123/Frontend-UI-Assessment.git
+
+
+

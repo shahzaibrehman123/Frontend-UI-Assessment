@@ -1,0 +1,91 @@
+.pa-ti-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#title-container {
+  color: #222;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#title-info-container {
+  width: 351px;
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pa-info-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#user-info-container {
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: white;
+}
+
+.sub-info {
+  width: 381px;
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#link-container {
+  color: #4d33ef;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+#btn-cont {
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+background: #5136FF;
+}
+
+#btn-cont:hover {
+    transform: scale(1.1);
+}
+
+#internal-text {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pa-btn-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

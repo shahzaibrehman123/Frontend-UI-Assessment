@@ -1,13 +1,16 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-// import SearchIcon from '@mui/icons-material/Search'; // Import the search icon
-import {ReactComponent as Searchlogo} from '../../Assets/VideoSection/Search.svg'
+import { ReactComponent as Searchlogo } from '../../Assets/VideoSection/Search.svg';
+import { ReactComponent as CtrlIcon } from '../../Assets/NavbarAssets/ctrl.svg';
 
-const Search = () => {
+const SubSearch = () => {
   const containerStyle = {
-    width: '20%',
-
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
+    width: '90%',
   };
 
   const inputFieldStyle = {
@@ -21,8 +24,8 @@ const Search = () => {
   };
 
   const inputFieldFocusStyle = {
-    display: 'flex', // Center content vertically and horizontally
-    alignItems: 'center', // Center content vertically
+    display: 'flex',
+    alignItems: 'center',
     justifyContent: 'center',
   };
 
@@ -31,22 +34,27 @@ const Search = () => {
       <TextField
         variant="outlined"
         fullWidth
-        placeholder="Search for Project"
+        placeholder="Search for People, tasks, docs"
         InputProps={{
-          startAdornment: ( // Add search icon as the startAdornment
+          startAdornment: (
             <InputAdornment position="start">
               <Searchlogo />
             </InputAdornment>
           ),
-          style: inputFieldStyle, // Apply custom styling
+          endAdornment: ( // Add Ctrl icon as the endAdornment
+            <InputAdornment position="end">
+              <CtrlIcon />
+            </InputAdornment>
+          ),
+          style: inputFieldStyle,
         }}
         InputLabelProps={{
-          style: inputFieldFocusStyle, // Apply custom styling when focused
+          style: inputFieldFocusStyle,
         }}
-        style={inputFieldFocusStyle} // Apply custom styling
+        style={inputFieldFocusStyle}
       />
     </div>
   );
 };
 
-export default Search;
+export default SubSearch;
