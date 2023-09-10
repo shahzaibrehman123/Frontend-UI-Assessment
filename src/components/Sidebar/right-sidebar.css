@@ -1,49 +1,88 @@
 /* Sidebar.css */
 .sidebar {
-    width: 250px;
-    height: 100%;
-    background-color: #ffff;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(-340px); /* Initial hidden position */
-    
-    
-  
-    
-  }
-  
-  .sidebar.open {
-    transform: translateX(0); /* Slide in when open */
-    /* z-index: 1; */
-    transition: transform 0.5s ease-in-out;
-  
-  }
-  
-  
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    color: #fff;
-    padding: 10px;
-    border-bottom: 1px solid #555;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  .Searchmic{
-    display: flex;
-    gap: 30px;
-    margin-right: 20px;
-  }
-  .main-icon-area{
-    padding-top: 20px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-  }
+  width: 250px;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-340px); /* Initial hidden position */
+  background-color: #f9f9f9;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide in when open */
+  /* z-index: 1; */
+  transition: transform 0.5s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.Searchmic {
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+}
+.main-icon-area {
+  padding-top: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.ov-container {
+  margin: 15px 0px 15px 5px;
+  color: #676767;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.recent-container {
+  display: flex;
+  margin: 10px 0px 30px 5px;
+  align-items: center;
+  height: 24px;
+}
+.recent-container:hover {
+  background-color: #ffff;
+  transform: scale(105%);
+}
+
+#re-text {
+  margin: 0px 0px 0px 15px;
+}
+
+.line-container {
+  margin-left: -25px;
+  margin-bottom: 25px;
+  height: 0px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #f0f0f0;
+}
+
+.overview-content-container {
+  margin-top: 40px;
+}
+
+.general-content-container {
+  margin-top: 40px;
+}
+
+.lower-container {
+  margin-top: 55px;
+}

@@ -1,11 +1,8 @@
 .Main-sidebar {
   display: flex;
-  
- 
 }
 .parent-side-bar {
-  
- height: 100vh;
+  height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -13,16 +10,15 @@
   flex-direction: column;
   /* align-items: flex-start; */
   z-index: 1;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 .container-for-imgs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.content{
+.content {
   width: auto;
 }
 .img-prop {
@@ -33,40 +29,31 @@
 
 .container-for-imgs img {
   height: 44px;
- 
-  }
-
+}
 
 .img-prop:hover img {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
+}
 
 .container-for-icons {
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
-
 }
 
-.logout-container{
-  margin: 0px 0px 15px 0px;
+.logout-container {
+  margin: 0px 0px 30px 0px;
   display: contents;
+  color: aqua;
 }
 
-.Main-sidebar
-{
+.Main-sidebar {
   display: flex;
 }
 
-
-
 .right-slider-container {
-  /* Your existing styles for the RightSlider content */
-
-  /* Add transitions for width and opacity */
   transition: width 0.5 ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -76,7 +63,10 @@
 }
 
 .right-slider-container.closed {
-
   width: 0;
   opacity: 0;
+}
+
+#logout-btn {
+  margin: 10px 0px 30px 5px;
 }

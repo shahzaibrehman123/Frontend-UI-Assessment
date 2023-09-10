@@ -69,6 +69,7 @@
 }
 
 .search-input-container {
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -86,7 +87,7 @@
   width: auto;
 }
 
-.parent-btn-container{
+.parent-btn-container {
   width: 50%;
 }
 
@@ -130,7 +131,6 @@
   background: #191b1c;
   color: white;
 }
-
 
 .lower-section {
   margin: 35px 0px 0px 0px;

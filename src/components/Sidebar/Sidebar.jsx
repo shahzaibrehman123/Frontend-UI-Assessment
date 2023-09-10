@@ -13,7 +13,6 @@ import logout from "../../Assets/SidebarAssets/logout.svg";
 import "./Sidebar.css";
 import RightSlider from "./Rightsidebar";
 function Sidebar() {
-  
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -22,8 +21,7 @@ function Sidebar() {
 
   return (
     <>
- 
-      <div className="Main-sidebar"> 
+      <div className="Main-sidebar">
         <div className="parent-side-bar">
           <div className="container-for-imgs">
             <span className="img-prop" onClick={toggleSidebar}>
@@ -39,10 +37,9 @@ function Sidebar() {
 
           <div className="container-for-icons">
             <span className="img-prop">
-            <span className="drop-icon">
-         
-              <img src={discover} alt="avatar" />
-            </span>
+              <span className="drop-icon">
+                <img src={discover} alt="avatar" />
+              </span>
             </span>
             <span className="img-prop">
               <img src={folder} alt="icon" />
@@ -62,19 +59,19 @@ function Sidebar() {
           </div>
 
           <div className="logout-container">
-            <span className="img-prop">
+            <div id="logout-btn" className="img-prop">
               <img src={logout} alt="avatar" />
-            </span>
+            </div>
           </div>
         </div>
 
         <div
-        className={`right-slider-container ${
-          isSidebarOpen ? "open" : "closed"
-        }`}
-      >
-        <RightSlider isSidebarOpen={isSidebarOpen} />
-      </div>
+          className={`right-slider-container ${
+            isSidebarOpen ? "open" : "closed"
+          }`}
+        >
+          <RightSlider isSidebarOpen={isSidebarOpen} />
+        </div>
       </div>
     </>
   );
