@@ -102,12 +102,10 @@ Example:
    ```bash
    npm run start
 
-
-
 ## Vercel Live
  Website
 ```bash
-   git clone https://github.com/shahzaibrehman123/Frontend-UI-Assessment.git
+   https://frontend-ui-assessment.vercel.app/
 
 
 
