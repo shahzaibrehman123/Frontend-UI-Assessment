@@ -3,19 +3,135 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin: 0px 15px 10px 15px;
+  margin: 10px 15px 10px 15px;
   border-radius: 32px;
   background: #f9f9f9;
+  overflow: hidden;
 }
-.title-class{
-    color: #222;
-font-family: Poppins;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+.title-class {
+  color: #222;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
-.upper-section{
-    margin: 10px 10px 10px 10px;
+.upper-section {
+  margin: 20px 10px 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section-container {
+  width: 25%;
+}
+
+#subheading {
+  color: #838383;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#arrow-container {
+  margin: 5px 0px 0px 0px;
+}
+
+#green-box {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 6px 8px;
+  border-radius: 19px;
+  background: #25ae3b;
+}
+#date-text {
+  width: 74px;
+  height: 20px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.re-gre-cont {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.recent-vid-container {
+  display: flex;
+}
+
+.search-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: -51px 0px 0px 0px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.middle-section {
+  margin: 0px 0px 0px 20px;
+  display: flex;
+  width: auto;
+}
+
+.parent-btn-container{
+  width: 50%;
+}
+
+.collaborator-container {
+  display: flex;
+  margin: 0px 55px 0px auto;
+  align-items: flex-end;
+}
+
+#add-new-container {
+  color: #725dff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#add-new-container:hover {
+  color: #f9f9f9;
+  border-radius: 3px solid;
+  background-color: #725dff;
+}
+
+.outer-layer {
+  display: flex;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 27px;
+  background: transparsent;
+  color: #616161;
+  cursor: pointer;
+  transition: background 0.3s; /* Add a transition for smooth color change */
+}
+
+.outer-layer.selected {
+  background: #191b1c;
+  color: white;
+}
+
+
+.lower-section {
+  margin: 35px 0px 0px 0px;
 }

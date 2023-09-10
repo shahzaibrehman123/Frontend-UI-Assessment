@@ -1,0 +1,91 @@
+/* VideoSection.css */
+
+/* Style for the card container using CSS Grid with gap */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235.385px, 1fr)); /* Responsive grid with a minimum column width */
+    grid-gap: 16px; /* Add gap between cards */
+    justify-items: center; /* Center cards horizontally in the grid */
+    padding-top: 20px;
+    overflow: auto; /* Add overflow: auto to enable scrolling if needed */
+  }
+  
+  /* Style for each card */
+  .card {
+    width: 80%;
+    max-width: 235.385px;
+    height: 298.198px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: white;
+    margin-bottom: 16px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .card::after{
+    background: #725DFF;
+  }
+
+  .card:hover{
+    background: #725DFF;
+    transform: scale(1.05);
+    color: white;
+   stroke: white;
+ 
+    
+  }
+
+  .card.selected{
+    background: #725DFF;
+   
+ 
+    
+  }
+  
+  /* Style for the image inside the card */
+  .card img {
+    width: 100%; 
+    max-width: 229.407px; 
+     
+    flex-shrink: 0;
+  }
+  
+  /* Style for the title and description layout */
+  .card .info {
+    flex-direction: column;
+    display: inline-flex;
+    
+    
+    margin-top: 16px;
+  }
+  
+  /* Style for the title and description */
+  .card h3,
+  .card p {
+    white-space: nowrap;
+    margin: 0;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(2, 1fr)); /* Single column for small screens */
+      
+    }
+  }
+
+  .Card-inner{
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+  .dot{
+    margin-top: 10px;
+
+  }
+  

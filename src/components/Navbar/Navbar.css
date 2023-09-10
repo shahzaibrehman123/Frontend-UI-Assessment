@@ -8,6 +8,9 @@
   margin: 0px 0px 0px 10px;
   display: flex;
 }
+.nav-container{
+  display: flex;
+}
 
 .text-container {
   align-items: center;
@@ -71,17 +74,22 @@
 }
 
 .collaborators {
-  margin: 10px 10px 0px 0px;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .colab-head {
+  margin: 0px 5px 0px 0px;
   color: #474747;
   font-family: Poppins;
   font-size: 12px;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
+  display: flex;
+  flex-direction: row;
 }
 
 .user-info {
@@ -129,6 +137,25 @@
   justify-content: flex-end;
 }
 
+.avatar {
+  /* vertical-align: middle; */
+  margin: 0px 0px px 0px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-left:-15px;
+  border:3px solid white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.avatar:hover{
+  transform: scale(1.1);
+  border:2px solid #725DFF;
+}
+
+.img-area{
+display:flex;
+margin: 0px 0px 0px 10px;
+}
 
 .child-1-container{
   display: contents;

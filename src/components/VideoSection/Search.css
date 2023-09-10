@@ -1,0 +1,42 @@
+/* Search.css */
+
+/* Override the TextField's background color to white */
+.custom-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: none; /* Remove the border when focused */
+    border-radius: 36px; /* Add border-radius */
+    height: 40px; /* Set the height to 40px */
+  }
+  
+  /* Override the input text color */
+  .custom-textfield .MuiInputBase-input {
+    color: #818181;
+  }
+  
+  /* Override the input label styles when focused */
+  .custom-input-label .MuiInputLabel-outlined.Mui-focused {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Override the input label color when focused */
+  .custom-input-label .MuiInputLabel-outlined.Mui-focused.MuiInputLabel-root {
+    color: #818181;
+  }
+  
+  /* Override the input field's background color to white */
+  .custom-textfield .MuiOutlinedInput-root {
+    background-color: white;
+  }
+  
+  /* Remove the default box shadow when focused */
+  .custom-textfield .MuiOutlinedInput-root.Mui-focused {
+    box-shadow: none;
+  }
+  
+  /* Override the input field's border-radius */
+  .custom-textfield .MuiOutlinedInput-notchedOutline {
+    border-radius: 36px;
+    height: 40px; /* Set the height to 40px */
+  }
+  

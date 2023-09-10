@@ -1,0 +1,49 @@
+/* Sidebar.css */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #ffff;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-340px); /* Initial hidden position */
+    
+    
+  
+    
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Slide in when open */
+    /* z-index: 1; */
+    transition: transform 0.5s ease-in-out;
+  
+  }
+  
+  
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  .Searchmic{
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+  }
+  .main-icon-area{
+    padding-top: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
