@@ -1,5 +1,6 @@
 import React from "react";
 import aiavatar from "../../Assets/NavbarAssets/ai-avatar.svg";
+import { ReactComponent as Burger } from "../../Assets/SidebarAssets/burger.svg";
 import AssistanceTextField from "./AssistanceTextField";
 import VideoSection from "../VideoSection/VideoSection";
 import u1 from "../../Assets/NavbarAssets/users/u1.svg"
@@ -15,9 +16,16 @@ import u10 from "../../Assets/NavbarAssets/users/u10.svg"
 import "./Navbar.css";
 
 function Navbar() {
+
   return (
     <div className="parent-div">
+    
       <div className="nav-container">
+          <div className="burger">
+        <span className="inner-burger" >
+          <Burger />
+        </span>
+      </div>
         <div className="child-1-container">
           <div className="img-name-container">
             <img
@@ -53,7 +61,7 @@ function Navbar() {
             </div>
           </div>
 
-          <div className="user-info">
+          <div className="user-info-img">
             <div className="text-info-holder">
               <div className="user-name">Marvin McKinney</div>
               <div className="user-email">marving@gmail.com</div>

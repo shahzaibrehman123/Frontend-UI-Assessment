@@ -1,124 +1,105 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import InputAdornment from "@mui/material/InputAdornment";
+import React, { useState, useRef, useEffect } from "react";
 import mic from "../../Assets/NavbarAssets/mic.svg";
 import SubSearch from "./SubSearch";
 import cancelIcon from "../../Assets/NavbarAssets/cancel.svg";
+import guyIcon from "../../Assets/NavbarAssets/guy.svg";
+import robIcon from "../../Assets/NavbarAssets/rob.svg";
+import hannaIcon from "../../Assets/NavbarAssets/hanna.svg";
+import addIcon from "../../Assets/NavbarAssets/add-tooltip.svg";
+import moveIcon from "../../Assets/NavbarAssets/move.svg";
+import "./AssistanceTextField.css";
 
 const AssistanceTextField = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const containerStyle = {
-    position: "relative",
-    width: "50%",
-  };
-
-  const inputFieldStyle = {
-    borderRadius: "36px",
-    background: "#f9f9f9",
-    border: "none",
-    padding: "10px",
-    paddingRight: "20px",
-    width: "100%",
-    height: "40px",
-    color: "#818181",
-    fontFamily: "Poppins",
-    fontSize: "14px",
-    fontStyle: "normal",
-    fontWeight: 500,
-  };
-
-  const dropdownStyle = {
-    position: "absolute",
-    top: "100%",
-    left: 0,
-    width: "100%",
-    height: "auto",
-    background: "#fff",
-    borderRadius: "16px",
-    border: "1px solid #ccc",
-    display: isDropdownOpen ? "block" : "none",
-    flexShrink: 0,
-  };
-
-  const dropdownOptionStyle = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: "10px",
-  };
-
-  const ButtonStyle = {
-    display: "flex",
-    flexDirection: "row",
-    overflow: "hidden",
-  };
-
-  const dropdown3styles = {
-    display: "flex",
-    padding: "8px 12px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "8px",
-    borderRadius: "31px",
-    border: "1px solid #f9f9f9",
-    background: "#f9f9f9",
-    cursor: "pointer",
-  };
-
-  const dropdownOption2Style = {
-    padding: "8px 16px",
-    color: "#888", // Add color property
-    fontFamily: "Poppins", // Add fontFamily property
-    fontSize: "12px", // Add fontSize property
-    fontStyle: "normal", // Add fontStyle property
-    fontWeight: 400, // Add fontWeight property
-    lineHeight: "normal", // Add lineHeight property
-  };
+  const dropdownRef = useRef(null);
 
   const handleDropdownToggle = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      // Click occurred outside of the dropdown, so close it.
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the click event listener when the component mounts.
+    document.addEventListener("click", handleClickOutside);
+
+    // Clean up the event listener when the component unmounts.
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div style={containerStyle}>
-      <TextField
-        variant="outlined"
-        fullWidth
-        placeholder="Need any Assistance?"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <img src={mic} alt="" />
-            </InputAdornment>
-          ),
-          style: inputFieldStyle,
-          onClick: handleDropdownToggle,
-        }}
-        InputLabelProps={{
-          style: inputFieldStyle,
-        }}
-        style={inputFieldStyle}
-      />
-      <div style={dropdownStyle}>
+    <div className={`container ${isDropdownOpen ? "open" : ""}`} ref={dropdownRef}>
+      <div className="input-container">
+        <input
+          className="input-field"
+          type="text"
+          placeholder="Need any Assistance?"
+          onClick={handleDropdownToggle}
+        />
+        <img className="mic-icon" src={mic} alt="Mic" />
+        
+      </div>
+      <div className="dropdown">
         {isDropdownOpen && (
           <div>
-            <div style={dropdownOptionStyle}>
+            <div className="dropdown-option">
               <SubSearch />
             </div>
-            <div style={dropdownOption2Style}>I'm looking for</div>
-            <div style={ButtonStyle}>
-              <div style={dropdown3styles}>
+            <div className="dropdown-option2">I'm looking for</div>
+            <div className="button-container">
+              <div className="dropdown3">
                 Collaborator
                 <img src={cancelIcon} alt="cnl" />
               </div>
-              <div style={dropdown3styles}>
-                Videos 
+              <div className="dropdown3">
+                Videos
                 <img src={cancelIcon} alt="cnl" />
               </div>
-              
             </div>
-            <div style={dropdownOption2Style}>Last Search</div>
+            <div className="dropdown-option2">Last Search 3</div>
+            <div>
+            <div className="srh-content-container">
+              <img className="srh-img" src={guyIcon} alt="cnl" />
+              <span className="srh-name">Guy Hawkins</span>
+              <span className="srh-email">guy@icloud.com</span>
+            </div>
+            <div className="srh-content-container">
+              <img className="srh-img" src={robIcon} alt="cnl" />
+              <span className="srh-name">Rob Miller</span>
+              <span className="srh-email">rob@icloud.com</span>
+            </div>
+            <div className="srh-content-container">
+              <img className="srh-img" src={hannaIcon} alt="cnl" />
+              <span className="srh-name">Hanna</span>
+              <span className="srh-email">hanna@icloud.com</span>
+            </div>
+            </div>
+            <div className="dropdown-option2">Quick Actions</div>
+            <div>
+            <div className="srh-action-container">
+              <img className="srh-img" src={addIcon} alt="cnl" />
+              <span className="srh-action-name">Create new Video</span>
+              <span className="srh-action-abr">N</span>
+            </div>
+            <div className="srh-action-container">
+              <img className="srh-img" src={addIcon} alt="cnl" />
+              <span className="srh-action-name">Add Collaborator</span>
+              <span className="srh-action-abr">A</span>
+            </div>
+            <div className="srh-action-container">
+              <img className="srh-img" src={moveIcon} alt="cnl" />
+              <span className="srh-action-name">Move File</span>
+              <span className="srh-action-abr" style={{marginLeft:"49%"}}>M</span>
+            </div>
+            </div>
+            
           </div>
         )}
       </div>

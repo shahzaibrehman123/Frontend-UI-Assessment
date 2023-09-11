@@ -72,3 +72,15 @@
   margin-left: 6px;
   
   }
+
+  .drawer-container-res{
+    padding: 16px; 
+    zoom:85%; 
+  }
+
+  @media only screen and (max-width: 375px) {
+    .drawer-container-res{
+      padding: 16px ; 
+      zoom:70%; 
+    }
+  }

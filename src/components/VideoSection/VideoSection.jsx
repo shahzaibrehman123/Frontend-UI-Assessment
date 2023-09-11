@@ -71,7 +71,9 @@ function VideoSection() {
     <div className="parent-section">
       <div className="upper-section">
         <div className="left-section-container">
-          <div className="recent-vid-container">
+
+         <div className="video-area">
+         <div className="recent-vid-container">
             <div className="title-class">Recent Videos</div>
             <div id="arrow-container">
               <KeyboardArrowDownIcon />
@@ -90,6 +92,8 @@ function VideoSection() {
               </div>
             </div>
           </div>
+         </div>
+          
         </div>
         <div>
           <div className="search-input-container">
@@ -135,7 +139,7 @@ function VideoSection() {
           </div>
         </div>
         <div className="collaborator-container">
-          <div className="collaborators">
+          <div className="collaborators-video">
             <div className="colab-head">
               Collaborators({collaborators.length}):
             </div>

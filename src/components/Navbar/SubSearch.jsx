@@ -1,36 +1,13 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-import { ReactComponent as Searchlogo } from '../../Assets/VideoSection/Search.svg';
+import { ReactComponent as SearchLogo } from '../../Assets/VideoSection/Search.svg';
 import { ReactComponent as CtrlIcon } from '../../Assets/NavbarAssets/ctrl.svg';
+import './SubSearch.css';
 
 const SubSearch = () => {
-  const containerStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent:'space-between',
-    alignItems: 'center',
-    width: '90%',
-  };
-
-  const inputFieldStyle = {
-    borderRadius: '36px',
-    background: '#f9f9f9',
-    height: '40px',
-    color: '#818181',
-    fontFamily: 'Poppins',
-    fontSize: '14px',
-    fontWeight: 400,
-  };
-
-  const inputFieldFocusStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
-
   return (
-    <div style={containerStyle}>
+    <div className="sub-search-container">
       <TextField
         variant="outlined"
         fullWidth
@@ -38,7 +15,7 @@ const SubSearch = () => {
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <Searchlogo />
+              <SearchLogo />
             </InputAdornment>
           ),
           endAdornment: ( // Add Ctrl icon as the endAdornment
@@ -46,12 +23,12 @@ const SubSearch = () => {
               <CtrlIcon />
             </InputAdornment>
           ),
-          style: inputFieldStyle,
+          className: "input-field",
         }}
         InputLabelProps={{
-          style: inputFieldFocusStyle,
+          className: "input-field-focus",
         }}
-        style={inputFieldFocusStyle}
+        className="input-field-focus"
       />
     </div>
   );

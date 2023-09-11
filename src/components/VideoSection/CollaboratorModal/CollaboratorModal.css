@@ -1,10 +1,41 @@
-.pa-ti-cont {
+/* CollaboratorModal.css */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal-content {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-container {
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 
-#title-container {
+.title {
   color: #222;
   font-family: Poppins;
   font-size: 22px;
@@ -13,7 +44,7 @@
   line-height: normal;
 }
 
-#title-info-container {
+.title-info {
   width: 351px;
   color: #222;
   font-family: Poppins;
@@ -23,27 +54,22 @@
   line-height: normal;
 }
 
-.pa-info-cont {
+.info-container {
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 
-#user-info-container {
+.user-info {
   color: #222;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.MuiOutlinedInput-notchedOutline {
-  border: white;
 }
 
 .sub-info {
-  width: 381px;
   color: #222;
   font-family: Poppins;
   font-size: 14px;
@@ -52,7 +78,7 @@
   line-height: normal;
 }
 
-#link-container {
+.link {
   color: #4d33ef;
   font-family: Poppins;
   font-size: 14px;
@@ -62,30 +88,25 @@
   text-decoration-line: underline;
 }
 
-#btn-cont {
-    display: flex;
-    padding: 8px 16px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 8px;
-background: #5136FF;
+.btn-container-add {
+  display: flex;
+  padding: 8px 16px;
+  margin-left: 80%;
+  gap: 10px;
+  border-radius: 8px;
+  background: #5136ff;
+  cursor: pointer;
 }
 
-#btn-cont:hover {
-    transform: scale(1.1);
+.btn-container-add:hover {
+  transform: scale(1.1);
 }
 
-#internal-text {
+.internal-text {
   color: #fff;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.pa-btn-container{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
 }

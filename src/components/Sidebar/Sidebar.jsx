@@ -21,7 +21,9 @@ function Sidebar() {
 
   return (
     <>
-      <div className="Main-sidebar">
+     
+
+      <div className= 'Main-sidebar' >
         <div className="parent-side-bar">
           <div className="container-for-imgs">
             <span className="img-prop" onClick={toggleSidebar}>

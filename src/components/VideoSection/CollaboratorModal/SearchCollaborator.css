@@ -1,0 +1,29 @@
+/* Search.css */
+
+.search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input-modal {
+    width: 300px;
+    border-radius: 36px;
+    background-color: white;
+    height: 40px;
+    color: #818181;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    flex: 1;
+    padding-left: 40px; /* Adjust this value to align the text properly */
+    border: 1px solid white; /* Add border to mimic outlined variant */
+  }
+  .search-input-modal:active{
+    border: 1px solid black;
+  }
+  
+  .email-icon {
+    position: absolute;
+    margin-left: 10px;
+  }
+  

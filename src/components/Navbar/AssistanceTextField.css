@@ -1,0 +1,199 @@
+/* AssistanceTextField.css */
+
+.container {
+  position: relative;
+  width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    margin: 17px 5px 15px 15px;
+    position: relative;
+    height: 40px;
+  }
+}
+
+.open .dropdown {
+  display: block;
+}
+
+.open .input-label {
+  display: block;
+}
+
+.input-label {
+  display: none;
+}
+
+.input-container {
+  display: flex;
+  width: 300px;
+  align-items: center; /* Align input and mic icon vertically */
+}
+
+.input-with-mic {
+  display: flex;
+  align-items: center;
+  position: relative; /* Add relative positioning */
+}
+
+.input-field {
+  border-radius: 36px;
+  background: #f9f9f9;
+  border: none;
+  padding: 10px;
+  width: calc(100% - 30px); /* Adjust the width to leave space for mic icon */
+  color: #818181;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.mic-icon {
+  margin-left: 85%;
+  cursor: pointer; /* Add pointer cursor to mic icon */
+  position: absolute;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  display: none;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 98%;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    display: none;
+    flex-shrink: 0;
+  }
+
+  .mic-icon {
+    margin-left: 80%;
+    cursor: pointer; /* Add pointer cursor to mic icon */
+    position: absolute;
+  }
+}
+
+.dropdown-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin-left: 15px;
+  gap: 5px;
+}
+
+.dropdown3 {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 31px;
+  border: 1px solid #f9f9f9;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.dropdown-option2 {
+  padding: 8px 16px;
+  color: #888;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.srh-content-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.srh-content-container:hover {
+  background-color: #e7dcdc;
+}
+
+.srh-img {
+  margin: 0px 5px 5px 5px;
+  width: 27.568px;
+  height: 27.568px;
+  border-radius: 27.568px;
+}
+
+.srh-name {
+  margin: 0px 5px 5px 5px;
+  color: #222;
+  font-family: Poppins;
+  font-size: 12.973px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.srh-email {
+  margin: 0px 5px 5px 5px;
+  color: #696969;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.srh-action-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.srh-action-container:hover{
+  background-color: #e7dcdc;
+}
+
+.srh-action-name {
+  color: #222;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.srh-action-abr {
+  margin-left: 100px;
+  display: flex;
+
+  width: 26px;
+  padding: 2px 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #929292;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

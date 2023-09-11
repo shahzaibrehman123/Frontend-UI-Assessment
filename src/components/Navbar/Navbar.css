@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 .img-name-container {
-  margin: 10px 0px 0px 10px;
+  margin: 10px 10px 0px 10px;
   display: flex;
 }
 .nav-container{
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px 0px 0px 30px;
+  margin-left: 65px;
 }
 
 .colab-head {
@@ -93,10 +93,20 @@
   flex-direction: row;
 }
 
-.user-info {
+.user-info-img {
   display: flex;
   width: -webkit-fill-available;
   justify-content: flex-end;
+}
+@media screen and (max-width: 679px) {
+
+.user-info-img {
+display: flex;
+width: -webkit-fill-available;
+justify-content: flex-end;
+margin-right: 25px;
+}
+
 }
 
 .user-name {
@@ -126,6 +136,10 @@
   border: 1px solid #f3f3f3;
   background: url("../../Assets/NavbarAssets/users/Rectangle\ 7.png"),
     lightgray 0px 0.75px / 100% 125% no-repeat;
+}
+
+.user-avatar:hover{
+  transform: scale(1.1);
 }
 
 .text-info-holder {
@@ -160,5 +174,72 @@ margin: 0px 0px 0px 10px;
 }
 
 .child-1-container{
-  display: contents;
+  display: flex;
 }
+
+@media screen and (max-width: 767px) {
+
+  .child-1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 968px) {
+  
+  .text-info-holder{
+    display: none;
+  }
+  .nav-container{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .parent-div {
+    /* margin: 10px 30px 0px 10px; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 968px) {
+  
+  .collaborators{
+    display: none;
+  } 
+}
+
+.upper-nav-area{
+display: flex;
+}
+
+@media screen and (max-width: 968px) {
+  .upper-nav-area{
+ flex-direction: column;
+  }
+
+}
+
+
+@media screen and (max-width: 850px) {
+
+  .middle-section{
+    flex-direction: column-reverse;
+  }
+  .collaborators{
+    /* display: flex;
+    justify-content: flex-start;
+    margin:0px; */
+    display: none;
+  }
+  
+}
+

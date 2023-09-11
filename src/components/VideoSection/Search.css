@@ -1,42 +1,28 @@
 /* Search.css */
 
-/* Override the TextField's background color to white */
-.custom-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border: none; /* Remove the border when focused */
-    border-radius: 36px; /* Add border-radius */
-    height: 40px; /* Set the height to 40px */
-  }
-  
-  /* Override the input text color */
-  .custom-textfield .MuiInputBase-input {
-    color: #818181;
-  }
-  
-  /* Override the input label styles when focused */
-  .custom-input-label .MuiInputLabel-outlined.Mui-focused {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Override the input label color when focused */
-  .custom-input-label .MuiInputLabel-outlined.Mui-focused.MuiInputLabel-root {
-    color: #818181;
-  }
-  
-  /* Override the input field's background color to white */
-  .custom-textfield .MuiOutlinedInput-root {
-    background-color: white;
-  }
-  
-  /* Remove the default box shadow when focused */
-  .custom-textfield .MuiOutlinedInput-root.Mui-focused {
-    box-shadow: none;
-  }
-  
-  /* Override the input field's border-radius */
-  .custom-textfield .MuiOutlinedInput-notchedOutline {
-    border-radius: 36px;
-    height: 40px; /* Set the height to 40px */
-  }
-  
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 300px;
+  border-radius: 36px;
+  background-color: white;
+  height: 40px;
+  color: #818181;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+  padding-left: 40px; /* Adjust this value to align the text properly */
+  border: 1px solid white; /* Add border to mimic outlined variant */
+}
+.search-input:active{
+  border: 1px solid black;
+}
+
+.search-icon {
+  position: absolute;
+  margin-left: 10px;
+}

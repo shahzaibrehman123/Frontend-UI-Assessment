@@ -36,7 +36,7 @@ export default function TemporaryDrawer({ isopen, onClose, title, img, descripti
       ref={drawerRef}
       style={{ width: '516px', height: '1166px' }}
     >
-      <div style={{ padding: '16px' }}>
+      <div className="drawer-container-res">
         <div className="drawer-header">
 
           <div className="upper-title">

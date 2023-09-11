@@ -87,7 +87,7 @@
 }
 
 .parent-btn-container {
-  width: 50%;
+  width: 100%;
 }
 
 .collaborator-container {
@@ -96,7 +96,15 @@
   align-items: flex-end;
 }
 
+.collaborators-video{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #add-new-container {
+  width: max-content;
   color: #725dff;
   font-family: Poppins;
   font-size: 14px;
@@ -134,3 +142,73 @@
 .lower-section {
   margin: 35px 0px 0px 0px;
 }
+
+
+
+@media screen and (max-width: 770px) {
+  .search-input-container{
+  display: none;
+  }
+}
+
+.video-area{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 600px) {
+ .btn-container{
+/* width: 400px; */
+overflow: scroll;
+ }
+ .video-area{
+ flex-direction: column;
+}
+
+ 
+}
+/* Hide the default scrollbars and style the custom scrollbar */
+::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  height: 0px; /* Height of the scrollbar */
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* Hide the scrollbar when not hovering over it */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+@media screen and (max-width: 850px) {
+  .collaborator-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .collaborators-video {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+ }
+
+
+@media screen and (max-width: 450px) {
+  .btn-container{
+ /* width: 300px; */
+ overflow: scroll;
+  }
+ }

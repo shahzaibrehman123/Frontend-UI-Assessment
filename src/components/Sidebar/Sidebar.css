@@ -70,3 +70,50 @@
 #logout-btn {
   margin: 10px 0px 30px 5px;
 }
+.burger {
+  width: 42px;
+  height: 40px;
+  background-color: rgba(243, 243, 243, 1);
+  border-radius: 16px;
+  border: 1px;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 0px 45px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  gap: 20px;
+}
+
+.burger {
+  display: block;
+}
+
+/* Media query to show the burger icon for screens 768px and above */
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Main-sidebar {
+    display: none;
+  }
+}
+
+.btn-container {
+  white-space: nowrap;
+}
+.re-gre-cont {
+  white-space: nowrap;
+}
+
+.title-class {
+  white-space: nowrap;
+}
